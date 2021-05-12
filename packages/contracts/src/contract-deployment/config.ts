@@ -36,6 +36,7 @@ export interface RollupDeployConfig {
     allowArbitraryContractDeployment: boolean
   }
   gasPriceOracleOwner: string
+  l2ChugSplashDeployerOwner: string
   addressManager?: string
   dependencies?: string[]
   deployOverrides: Overrides
@@ -263,6 +264,10 @@ export const makeContractDeployConfig = async (
     OVM_GasPriceOracle: {
       factory: getContractFactory('OVM_GasPriceOracle'),
       params: [config.gasPriceOracleOwner],
+    },
+    L2ChugSplashDeployer: {
+      factory: getContractFactory('L2ChugSplashDeployer'),
+      params: [config.l2ChugSplashDeployerOwner],
     },
   }
 }
