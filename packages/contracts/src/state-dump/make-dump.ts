@@ -138,6 +138,7 @@ export const makeStateDump = async (cfg: RollupDeployConfig): Promise<any> => {
       'OVM_ExecutionManagerWrapper',
       'OVM_GasPriceOracle',
       'L2ChugSplashDeployer',
+      'L2ChugSplashOwner',
     ],
     deployOverrides: {},
     waitForReceipts: false,
@@ -159,6 +160,7 @@ export const makeStateDump = async (cfg: RollupDeployConfig): Promise<any> => {
     'OVM_ExecutionManagerWrapper',
     'OVM_GasPriceOracle',
     'L2ChugSplashDeployer',
+    'L2ChugSplashOwner',
   ]
 
   const deploymentResult = await deploy(config)
