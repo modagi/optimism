@@ -3,9 +3,7 @@ module.exports = {
         "browser": true,
         "es6": true
     },
-    "extends": [
-        "prettier",
-    ],
+    "extends": ["plugin:prettier/recommended"],
     "ignorePatterns": ["dist/**/*.ts"],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
@@ -21,6 +19,7 @@ module.exports = {
         "@typescript-eslint",
     ],
     "rules": {
+        "prettier/prettier": "warn",
         "@typescript-eslint/adjacent-overload-signatures": "error",
         "@typescript-eslint/array-type": "off",
         "@typescript-eslint/ban-types": "off",
